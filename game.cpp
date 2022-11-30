@@ -12,6 +12,9 @@ Game::Game() : m_window(sf::VideoMode(1920, 1080), "Candy From A Baby"/*, sf::St
 
 	CANDY_ASSERT(m_menu.openFromFile("./assets/soundtrack/menu.mp3"), "failed to load external resource ./assets/soundtrack/menu.mp3");
 	CANDY_ASSERT(m_game_music.openFromFile("./assets/soundtrack/main.mp3"), "failed to load external resource ./assets/soundtrack/main.mp3");
+		
+	m_menu.setLoop(true);
+	m_game_music.setLoop(true);
 }
 
 Game::~Game() {
